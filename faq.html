@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about Unique File Organizer">
+    <title>FAQ - Unique File Organizer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header with Donate Button -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📁 Unique File Organizer</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="download.html" class="nav-link">Download</a>
+                    <a href="faq.html" class="nav-link active">FAQ</a>
+                    <button id="donate-btn" class="donate-btn">❤️ Donate</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Find answers to common questions about Unique File Organizer</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="general">General</button>
+                <button class="faq-category-btn" data-category="features">Features</button>
+                <button class="faq-category-btn" data-category="technical">Technical</button>
+                <button class="faq-category-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <!-- General Questions -->
+            <div class="faq-category-content" data-category="general">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is Unique File Organizer?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unique File Organizer is a free, open-source Windows application that helps you organize and copy unique files from source directories to a destination directory. It uses SHA256 hashing to identify truly unique files based on their content, not just file names, ensuring accurate duplicate detection.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is Unique File Organizer really free?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Unique File Organizer is completely free and open-source under the MIT License. There are no hidden costs, subscriptions, or premium features. However, if you find it useful, we appreciate donations to support continued development.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What operating systems are supported?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unique File Organizer is designed for Windows 10 (version 1809 or later) and Windows 11. We provide builds for 64-bit, 32-bit, and ARM64 architectures. The application requires .NET 8.0 Runtime, which is included in the installer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my data safe? Does the app collect any information?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your data is completely safe. Unique File Organizer operates entirely offline with no network access. We do not collect any telemetry, user data, or personal information. All file operations are performed locally on your machine, and no data ever leaves your computer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Questions -->
+            <div class="faq-category-content" data-category="features" style="display: none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does duplicate detection work?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The application uses SHA256 cryptographic hashing to identify unique files. Each file is read and its SHA256 hash is computed. Files with identical hashes are considered duplicates, regardless of their file names. This ensures true content-based duplicate detection, not just filename comparison.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I process multiple source folders at once?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Version 2.0 supports adding up to 5 source folders simultaneously. You can add multiple folders, and the application will scan all of them for unique files before copying to the destination folder.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What file types can I organize?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>By default, the application supports common file types like .doc, .docx, .pdf, .png, .jpg, .jpeg, .txt, .xlsx, and .pptx. However, you can add custom file extensions using the Extension Manager feature. You can also import/export extension lists in XML format.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I export the results?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! After processing, you can view detailed results and export them to CSV format. The export includes information about successfully copied files, files that already existed in the destination, and any files that failed to copy with error details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does it support nested folders?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can enable the "Include nested folders" option to recursively scan all subfolders within your source directories. This allows you to process entire directory trees in a single operation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-category-content" data-category="technical" style="display: none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the system requirements?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Minimum requirements: Windows 10 (1809+) or Windows 11, 1 GHz processor, 512 MB RAM (2 GB recommended), and 100 MB free disk space. The .NET 8.0 Runtime is included in the installer, so no additional software is required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much disk space do I need?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The application itself requires about 100 MB. However, ensure your destination folder has enough space to accommodate all unique files that will be copied. The application will show an error if the destination runs out of space during copying.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does it work with network drives?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, the application can work with network drives and mapped network locations. However, performance may be slower compared to local drives due to network latency. Ensure you have proper read/write permissions for the network locations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How fast is the processing?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Processing speed depends on several factors: number of files, file sizes, disk speed, and whether you're using hash-based or name-based comparison. The application uses asynchronous processing and is optimized for performance. For faster processing of large file sets, you can enable "Name Based Comparison" in settings.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I build it from source?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The source code is available on GitHub. You'll need .NET 8.0 SDK and Visual Studio 2022 (or any compatible IDE). Clone the repository, restore dependencies with <code>dotnet restore</code>, and build with <code>dotnet build --configuration Release</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Troubleshooting Questions -->
+            <div class="faq-category-content" data-category="troubleshooting" style="display: none;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>I'm getting "Access Denied" errors. What should I do?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ensure you have read permissions for the source folders and write permissions for the destination folder. If you're accessing system folders or protected directories, you may need to run the application as administrator (though this is generally not recommended for security reasons).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>The application is running slowly. How can I speed it up?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Try these solutions: 1) Reduce the number of file types selected, 2) Disable nested folder scanning if not needed, 3) Enable "Name Based Comparison" for faster processing (though less accurate), 4) Process smaller batches of files, 5) Ensure your antivirus isn't scanning every file operation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Some files aren't being detected as duplicates. Why?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The application detects duplicates based on file content (SHA256 hash), not filename. If two files have identical content but different names, they are considered duplicates. If files appear similar but aren't detected as duplicates, they likely have different content (even minor differences will result in different hashes).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>The application won't start. What should I do?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>First, ensure .NET 8.0 Runtime is installed (it should be included with the installer). Try reinstalling the application. Check Windows Event Viewer for error details. If the problem persists, download the portable version or build from source.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I cancel a long-running operation?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Click the "Cancel" button during processing to safely stop the operation. The application will stop processing and show results for files processed up to that point. Cancellation is responsive and should stop within a few seconds.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>My configuration isn't being saved. What's wrong?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ensure the application has write permissions to <code>%AppData%\UniqueFileOrganizer</code>. This is where configuration files are stored. If you're running from a restricted location or user account, the application may not be able to save settings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Placeholder -->
+    <div class="ad-container">
+        <div class="container">
+            <div class="ad-placeholder">
+                <p class="ad-label">Advertisement</p>
+                <div class="ad-content">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Ad Unit -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="XXXXXXXXXX"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Still Have Questions Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Still Have Questions?</h2>
+            <p>If you couldn't find the answer you're looking for, feel free to reach out to us.</p>
+            <div class="contact-options">
+                <a href="https://github.com/yourusername/unique-file-organizer/issues" class="btn btn-primary" target="_blank">Report an Issue on GitHub</a>
+                <button id="contact-donate-btn" class="btn btn-secondary">❤️ Support the Project</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Unique File Organizer</h4>
+                    <p>Smart file organization tool for Windows</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>If you find this tool useful, please consider supporting the development.</p>
+                    <button id="footer-donate-btn" class="btn btn-secondary">❤️ Donate</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Unique File Organizer. Licensed under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PayPal Donation Modal -->
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Support Development</h2>
+            <p>Your donation helps keep this project free and actively maintained. Thank you for your support!</p>
+            <div id="paypal-button-container"></div>
+        </div>
+    </div>
+
+    <script src="js/paypal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
