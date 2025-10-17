@@ -1,6 +1,6 @@
-# Unique File Organizer - Website
+# DeDup - Website
 
-This is the official website for Unique File Organizer, a smart file organization tool for Windows.
+This is the official website for DeDup, a smart file organization tool for Windows.
 
 ## 📁 Structure
 
@@ -238,7 +238,7 @@ Before going live, update:
 
 ## 📄 License
 
-This website is part of the Unique File Organizer project, licensed under MIT License.
+This website is part of the DeDup project, licensed under MIT License.
 
 ## 🤝 Contributing
 
@@ -257,4 +257,4 @@ For issues or questions:
 
 ---
 
-**Made with ❤️ for the Unique File Organizer community**
+**Made with ❤️ for the DeDup community**

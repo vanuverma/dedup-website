@@ -1,5 +1,5 @@
 /**
- * Main JavaScript for Unique File Organizer Website
+ * Main JavaScript for DeDup Website
  */
 
 // Wait for DOM to be fully loaded

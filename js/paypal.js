@@ -1,5 +1,5 @@
 /**
- * PayPal Integration for Unique File Organizer
+ * PayPal Integration for DeDup
  * This file handles PayPal donation button integration
  */
 
@@ -35,7 +35,7 @@ function initializePayPalButton() {
             // Set up the transaction
             return actions.order.create({
                 purchase_units: [{
-                    description: 'Donation to Unique File Organizer',
+                    description: 'Donation to DeDup',
                     amount: {
                         currency_code: PAYPAL_CONFIG.currency,
                         value: '5.00', // Default donation amount
