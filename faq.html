@@ -6,6 +6,14 @@
     <meta name="description" content="Frequently Asked Questions about DeDup">
     <title>FAQ - DeDup</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_6X4vdRp5C9mCM3z8Lf0QmYAWDmxGRejLHwR9KgQwjFJ', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2025-05-24',
+            person_profiles: 'always', // or 'always' to create profiles for anonymous users as well
+        })
+    </script>
 </head>
 <body>
     <!-- Header with Donate Button -->
@@ -19,7 +27,7 @@
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="download.html" class="nav-link">Download</a>
                     <a href="faq.html" class="nav-link active">FAQ</a>
-                    <button id="donate-btn" class="donate-btn">❤️ Donate</button>
+                    <!-- <button id="donate-btn" class="donate-btn">❤️ Donate</button> -->
                 </nav>
             </div>
         </div>
@@ -94,7 +102,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>The application uses SHA256 cryptographic hashing to identify unique files. Each file is read and its SHA256 hash is computed. Files with identical hashes are considered duplicates, regardless of their file names. This ensures true content-based duplicate detection, not just filename comparison.</p>
+                        <p>The application uses SHA256 cryptographic hashing by default to identify unique files. Each file is read and its SHA256 hash is computed. Files with identical hashes are considered duplicates, regardless of their file names. This ensures true content-based duplicate detection, not just filename comparison.</p>
                     </div>
                 </div>
 
@@ -104,7 +112,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! Version 2.0 supports adding up to 5 source folders simultaneously. You can add multiple folders, and the application will scan all of them for unique files before copying to the destination folder.</p>
+                        <p>Yes! DeDup supports adding up to 5 source folders simultaneously. You can add multiple folders, and the application will scan all of them for unique files before copying to the destination folder.</p>
                     </div>
                 </div>
 
@@ -134,7 +142,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! You can enable the "Include nested folders" option to recursively scan all subfolders within your source directories. This allows you to process entire directory trees in a single operation.</p>
+                        <p>Yes! You can enable the "Include nested folders" option to recursively scan all subfolders within your source directories. This allows you to process entire directory trees in a single operation. However, the nested folder is restricted to a maximum of 7 to avoid "path too long" error.</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +155,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Minimum requirements: Windows 10 (1809+) or Windows 11, 1 GHz processor, 512 MB RAM (2 GB recommended), and 100 MB free disk space. The .NET 8.0 Runtime is included in the installer, so no additional software is required.</p>
+                        <p>Minimum requirements: Windows 10 (1809+) or Windows 11, 1 GHz processor, 512 MB RAM (2 GB recommended), and ~400 MB free disk space. The .NET 8.0 Runtime is included in the installer, so no additional software is required.</p>
                     </div>
                 </div>
 
@@ -157,11 +165,11 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>The application itself requires about 100 MB. However, ensure your destination folder has enough space to accommodate all unique files that will be copied. The application will show an error if the destination runs out of space during copying.</p>
+                        <p>The application itself requires about 400 MB. However, ensure your destination folder has enough space to accommodate all unique files that will be copied. The application will show an error if the destination runs out of space during copying.</p>
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <!-- <div class="faq-item">
                     <div class="faq-question">
                         <h3>Does it work with network drives?</h3>
                         <span class="faq-toggle">+</span>
@@ -169,7 +177,7 @@
                     <div class="faq-answer">
                         <p>Yes, the application can work with network drives and mapped network locations. However, performance may be slower compared to local drives due to network latency. Ensure you have proper read/write permissions for the network locations.</p>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="faq-item">
                     <div class="faq-question">
@@ -181,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <!-- <div class="faq-item">
                     <div class="faq-question">
                         <h3>Can I build it from source?</h3>
                         <span class="faq-toggle">+</span>
@@ -189,7 +197,7 @@
                     <div class="faq-answer">
                         <p>Yes! The source code is available on GitHub. You'll need .NET 8.0 SDK and Visual Studio 2022 (or any compatible IDE). Clone the repository, restore dependencies with <code>dotnet restore</code>, and build with <code>dotnet build --configuration Release</code>.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Troubleshooting Questions -->
@@ -220,7 +228,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>The application detects duplicates based on file content (SHA256 hash), not filename. If two files have identical content but different names, they are considered duplicates. If files appear similar but aren't detected as duplicates, they likely have different content (even minor differences will result in different hashes).</p>
+                        <p>The application detects duplicates based on file content using SHA256 hash by default. If two files have identical content but different names, they are considered duplicates. If files appear similar but aren't detected as duplicates, they likely have different content (even minor differences will result in different hashes).</p>
                     </div>
                 </div>
 
@@ -250,7 +258,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Ensure the application has write permissions to <code>%AppData%\UniqueFileOrganizer</code>. This is where configuration files are stored. If you're running from a restricted location or user account, the application may not be able to save settings.</p>
+                        <p>Ensure the application has write permissions to the root folder from where it is running. This is where configuration files are stored. If you're running from a restricted location or user account, the application may not be able to save settings.</p>
                     </div>
                 </div>
             </div>
@@ -285,8 +293,8 @@
             <h2 class="section-title">Still Have Questions?</h2>
             <p>If you couldn't find the answer you're looking for, feel free to reach out to us.</p>
             <div class="contact-options">
-                <a href="https://github.com/yourusername/unique-file-organizer/issues" class="btn btn-primary" target="_blank">Report an Issue on GitHub</a>
-                <button id="contact-donate-btn" class="btn btn-secondary">❤️ Support the Project</button>
+                <a href="https://github.com/vanuverma/dedup-website/issues" class="btn btn-primary" target="_blank">Report an Issue on GitHub</a>
+                <!-- <button id="contact-donate-btn" class="btn btn-secondary">❤️ Support the Project</button> -->
             </div>
         </div>
     </section>
@@ -309,12 +317,13 @@
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
-                    <p>If you find this tool useful, please consider supporting the development.</p>
-                    <button id="footer-donate-btn" class="btn btn-secondary">❤️ Donate</button>
+                    <p>Coming soon!</p>
+                    <!-- <p>If you find this tool useful, please consider supporting the development.</p> -->
+                    <!-- <button id="footer-donate-btn" class="btn btn-secondary">❤️ Donate</button> -->
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 DeDup. Licensed under MIT License.</p>
+                <p>&copy; 2025 DeDup. Licensed under MIT License.</p>
             </div>
         </div>
     </footer>
@@ -324,8 +333,9 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Support Development</h2>
-            <p>Your donation helps keep this project free and actively maintained. Thank you for your support!</p>
-            <div id="paypal-button-container"></div>
+            <p>Coming soon!</p>
+            <!-- <p>Your donation helps keep this project free and actively maintained. Thank you for your support!</p> -->
+            <!-- <div id="paypal-button-container"></div> -->
         </div>
     </div>
 
