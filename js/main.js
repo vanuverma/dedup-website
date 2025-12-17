@@ -68,13 +68,13 @@ function initializeModal() {
 function initializeDownloadButtons() {
     const downloadButtons = document.querySelectorAll('.btn-download');
     
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            // e.preventDefault();
-            const platform = this.getAttribute('data-platform');
-            handleDownload(platform);
-        });
-    });
+    // downloadButtons.forEach(button => {
+    //     button.addEventListener('click', function(e) {
+    //         // e.preventDefault();
+    //         const platform = this.getAttribute('data-platform');
+    //         handleDownload(platform);
+    //     });
+    // });
 }
 
 /**
